@@ -1,0 +1,4 @@
+.eggoez
+=======
+
+eggdrop goez
