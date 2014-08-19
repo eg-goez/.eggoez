@@ -1,23 +1,23 @@
 #!/bin/sh
 
 echo "---------------------------"
-echo "  eggoez membuat konfigurasi   "
-echo "   kunjungi eggoez.com         "
-echo "  #ciut irc.allnetwork.org         "
+echo "  eggoez creating configuration files   "
+echo "  visit at eg-goez.blogspot.com         "
+echo "  or go #ciut irc.allnetwork.org         "
 echo "---------------------------"
 echo ""
 
 if test $# -ne 7
 then
-  echo "Gunakan  :"
+  echo "Use  :"
   echo ""
   echo "   ./eggo 1 2 3 4 5 6 7"
   echo ""
-  echo "   1 = nama config yang ingin dibuat"
-  echo "   2 = nick bot yang ingin dipakai"
-  echo "   3 = ident bot yang akan dipakai"
+  echo "   1 = new name file config will create"
+  echo "   2 = nick bot will be use"
+  echo "   3 = ident bot will be use"
   echo "   4 = IP Shell / VPS"
-  echo "   5 = channel (jangan gunakan tanda #)"
+  echo "   5 = channel (dont enter #)"
   echo "   6 = nick owner"
   echo "   7 = Server IRC"
   echo ""
@@ -26,29 +26,29 @@ fi
 
 if ! test -s .ge/goez.tcl
 then
-  echo "Kesalahan : goez.tcl tidak ada."
+  echo "Error : goez.tcl not found."
   echo ""
   exit
 fi
 
 if ! test -s eggo.conf
 then
-  echo "Kesalahan : eggo.conf tidak ada."
+  echo "Error : eggo.conf not found."
   echo ""
   exit
 fi
 
 if ! test -s .ge/goez.tcl
 then
-  echo "goez.tcl mungkin tidak ada"
-  echo "silahkan ulangi donwload eggoez.tar.gz"
+  echo "Ops.. needd file goez.tcl"
+  echo "try to redownload eggoez.tar.gz"
   exit
 fi
 
 if ! test -s eggo.conf
 then
-  echo "Sepertinya file eggo.conf tidak ada, padahal eggoez.tar.gz sangat membutuhkan"
-  echo "Silahkan kontak g0eZ"
+  echo "Ops.. cant find eggo.conf eggoez.tar.gz need this file."
+  echo "Please redonwload or contact us"
   exit
 fi
 
@@ -90,10 +90,10 @@ chmod u+x $1.run
 echo ""
 echo ""
 
-echo "Sip deh, konfigurasi berhasil dibuat"
-echo "untuk memulai bot anda ketik:"
+echo "Okay.. New file configuration was created."
+echo "for run your bot syntax:"
 echo "./goez $1 "
 echo ""
-echo "tetap semangat temans..."
-echo "terimakasih telah menggunakan eggodrop goez"
+echo "keep spirit frinds"
+echo "thanks for use eggdrop goez"
 
