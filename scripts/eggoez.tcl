@@ -1,13 +1,13 @@
-#######################################################################
-#                                          # Script Name			: eggoez.tcl					#																
-#                                          # Script Version		: t.c(£) v.6.9.2					#
-#                                          # Author					: eggoez							#
-#                                          # Release Date			: 05 Oktober 2010		#
-#                    				   	     # Reported any bug    : #ciut@allnetwork		#
-#        									 # New Staff egGo     :  g0eZ							#
-#					 						 # E-mail 					: eggoez@yahoo.com			#
-#							WARNING " respect other people's work without changing the content of these "
-#######################################################################
+#########################################################################
+#  # Script Name	: eggoez.tcl					#																
+#  # Script Version	: t.c(£) v.6.9.2				#
+#  # Author		: eggoez					#
+#  # Release Date	: 05 Oktober 2010				#
+#  # Reported any bug   : #ciut@allnetwork				#
+#  # New Staff egGo     :  g0eZ						#
+#  # E-mail 		: eggoez@yahoo.com				#
+# "respect other people's work without changing the content of these "	#
+#########################################################################
 putlog "========================================"
 putlog "          eggoez.tcl Part (2) Loaded        "
 putlog "          eggoez@yahoo.com       "
