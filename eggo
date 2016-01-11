@@ -1,0 +1,99 @@
+#!/bin/sh
+
+echo "---------------------------"
+echo "  eggoez membuat konfigurasi   "
+echo "   kunjungi eggoez.com         "
+echo "  #ciut irc.allnetwork.org         "
+echo "---------------------------"
+echo ""
+
+if test $# -ne 7
+then
+  echo "Gunakan  :"
+  echo ""
+  echo "   ./eggo 1 2 3 4 5 6 7"
+  echo ""
+  echo "   1 = nama config yang ingin dibuat"
+  echo "   2 = nick bot yang ingin dipakai"
+  echo "   3 = ident bot yang akan dipakai"
+  echo "   4 = IP Shell / VPS"
+  echo "   5 = channel (jangan gunakan tanda #)"
+  echo "   6 = nick owner"
+  echo "   7 = Server IRC"
+  echo ""
+  exit
+fi
+
+if ! test -s .ge/goez.tcl
+then
+  echo "Kesalahan : goez.tcl tidak ada."
+  echo ""
+  exit
+fi
+
+if ! test -s eggo.conf
+then
+  echo "Kesalahan : eggo.conf tidak ada."
+  echo ""
+  exit
+fi
+
+if ! test -s .ge/goez.tcl
+then
+  echo "goez.tcl mungkin tidak ada"
+  echo "silahkan ulangi donwload eggoez.tar.gz"
+  exit
+fi
+
+if ! test -s eggo.conf
+then
+  echo "Sepertinya file eggo.conf tidak ada, padahal eggoez.tar.gz sangat membutuhkan"
+  echo "Silahkan kontak g0eZ"
+  exit
+fi
+
+echo "set nick "\"$2\" > $1
+echo "set username "\"$3\" >> $1
+echo "set my-hostname "\"$4\" >> $1
+echo "set my-ip "\"$4\" >> $1
+echo "set basechan "\"\#$5\" >> $1
+echo "set owner "\"$6\" >> $1
+echo "set servers "\{$7\} >> $1
+echo " Config file : "$1""
+cat $1
+echo "set userfile "\"$2.usr\" >> $1
+echo "set chanfile "\"$2.chn\" >> $1
+echo "set altnick "\"$2--\" >> $1
+
+
+cat eggo.conf >> $1
+pwd > $1.dir
+dir=$(cat $1.dir)
+echo "* * * * * $dir/$1.upd >/dev/null 2>&1" > $1.d
+crontab $1.d
+crontab -l | grep $1.upd
+echo "
+if test -r $dir/pid.$1; then
+pid=\$(cat $dir/pid.$1)
+if \$(kill -CHLD \$pid >/dev/null 2>&1)
+then
+exit 0
+fi
+fi
+cd $dir
+./$1.run &>/dev/null" > $1.upd
+chmod u+x $1.upd
+echo "
+./go -s "eggoez: running@eggdrop.goez -OK" ./eggoez -m $1
+" > $1.run
+chmod u+x $1.run
+echo ""
+echo ""
+
+echo "Sip deh, konfigurasi berhasil dibuat"
+echo "untuk memulai bot anda ketik:"
+echo "./goez $1 "
+echo ""
+echo "tetap semangat temans..."
+echo "terimakasih telah menggunakan eggodrop goez"
+

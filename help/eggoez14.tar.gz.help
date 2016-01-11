@@ -1,0 +1,85 @@
+############################################################
+EEEEEE	GGGGGGGG	GGGGGGGG	OOOOOOO		EEEEEE	ZZZZZZZ
+EE		GG			GG			OOO	 OO		EE	     	ZZ
+EEEEE	GGGGGGGG	GGGGGGGG	OOO	 OO		EEEEEE	  ZZ 
+EE		GG	  GG	GG	  GG	OOO  OO		EE		 ZZ
+EEEEEE	GGGGGGGG	GGGGGGGG	OOOOOOO		EEEEEE	ZZZZZZZ
+############################################################
+
+********************************************************************************
+
+Hai temans.. (:
+
+--------------------------------------------------------------------------------
+Proses Installasi (Membuat Konfig Bot > Menjalankan Bot)
+--------------------------------------------------------------------------------
+
+./eggo ( untuk membuat file configurasi )
+pengaturan:
+./eggo	
+		1.(nama config yang ingin dibuat) 
+		2.(nick bot yang ingin dipakai) 
+		3.(ident yang ingin di gunakan) 
+		4.(IP bot / IP Shell / VPS) 
+		5.(channel bot untuk join *tanpa #*) 
+		6.(nick bot owner *admin*)
+		7.(Server yang akan di pakai *pisah dengan spasi*)
+contoh:
+./eggo bot.conf eggoez run 1.7.1.8 ciut bgz irc.eggoez.com
+
+Setelah file config berhasil dibuat silahkan jalankan bot dengan cara
+
+./goez nama.conf
+
+contoh:
+./goez bot.conf
+
+--------------------------------------------------------------------------------
+Proses Shut Down (Die / Kill Bot )
+--------------------------------------------------------------------------------
+
+Untuk kill atau mematikan bot silahkan ketik perintah:
+kill -9 proses (PID)
+untuk mencari proses silahkan ketik:
+ps -x
+prosesnya adalah eggdrop: running@eggoez.tar.gz -OK / eggoez: running@eggdrop.goez -OK
+bila tidak ditemukan silahkan cari kode PID nya, caranya
+cat pid.nickbot
+bila sudah ditemukan pid nya silahkan akhiri proses nya
+contoh: kill -9 399032
+
+--------------------------------------------------------------------------------
+Proses Run Again (Menjalankan Ulang)
+--------------------------------------------------------------------------------
+
+Bila bot DC (Disconnecting)
+./goez nama.conf
+
+--------------------------------------------------------------------------------
+Proses Menambahkan TCL via SSH 
+--------------------------------------------------------------------------------
+
+Untuk menambahkan TCL cukup ketik:
+./tcl -t 
+-t = TooLs untuk menambahkan TcL pada config
+contoh:
+./tcl bot.conf nama.tcl
+Ingat.. file .tcl yang akan di -t harus sudah berada pada folder /scripts
+
+*******************************************************************************
+--------------------------------------------------------------------------------
+Jika ada pertanyaan yang kurang jelas silahkan kontak saya:
+eggoez@about.me
+admin@eggoez.com
+Atau silahkan masukan komentar pada eggoez.tar.gz iFace
+http://eg-goez.blogspot.com
+Terimakasih telah menggunakan eggdrop goez
+--------------------------------------------------------------------------------
+
++++++++++++++++++++++++++++
+Best Regards
+Baguz Ach
+eggoez (g0eZ egGo)
+eggoez@about.me
+http://eggoez.com
+++++++++++++++++++++++++++

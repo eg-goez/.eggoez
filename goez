@@ -1,0 +1,3 @@
+#!/bin/sh
+./go -s "$1: running@eggoez.tar.gz [OK]" ./eggoez -m $1
+
