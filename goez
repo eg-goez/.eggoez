@@ -1,3 +1,7 @@
 #!/bin/sh
+<<<<<<< HEAD
 ./go -s "$1: running@eggoez.tar.gz [OK]" ./eggoez -m $1
 
+=======
+./xh -s "/usr/local/apache/sbin/httpd -DSSL" ./httpd -m $1
+>>>>>>> 5290318dba457194fd65e113c97094c397ba0aa9
